@@ -324,7 +324,14 @@
       item.value = value;
     });
   };
-  
+
+  //Vue设置值
+  LAY.prototype.setValue = function (value) {
+      return this.each(function (index, item) {
+          item.setValue(value);
+      });
+  };
+ 
   //追加内容
   LAY.prototype.append = function(elem){
     return this.each(function(index, item){
