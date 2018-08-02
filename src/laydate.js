@@ -1405,7 +1405,7 @@
     var that = this
     ,options = that.config
     ,elem = that.bindElem || options.elem[0]
-    , valType = window["Vue"] ? 'setValue' : that.isInput(elem) ? 'val' : 'html'
+    , valType = window.Vue ? 'setValue' : that.isInput(elem) ? 'val' : 'html'
     
     options.position === 'static' || lay(elem)[valType](value || '');
     return this;
